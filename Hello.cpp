@@ -20,6 +20,24 @@ ll multiply(ll a, ll b){
 	return(a*b);
 }
 
+// Nhat - ham tru
+ll tru(ll a, ll b)
+	{
+		return (a-b);
+	}
+// Nhat - ham chia
+ll chia(ll a, ll b)
+	{
+		return (a/b);
+	}
+// Nhat - ham giai thua
+ll giaithua(int n)
+	{
+		ll result=1;
+    		for (int i=2;i<=n;i++) result*=i;
+    		return result;
+	}
+	
 /**
  * This is main function
  */
@@ -29,5 +47,8 @@ int main() {
 	ll b = 170;
 	cout << a << " + " << b << " = " << add(a,b) << endl;
 	cout << a << " * " << b << " = " << multiply(a,b) << endl;
+	cout << a << " - " << b << " = " << tru(a,b) << endl;
+	cout << a << " / " << b << " = " << chia(a,b) << endl;
+	cout << "Giai thua cua" << a << "la :" << giaithua(a) << endl;
 	return 0;
 }
