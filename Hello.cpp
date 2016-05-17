@@ -71,3 +71,4 @@ int main() {
 	cout << "Giai thua cua" << a << "la :" << giaithua(a) << endl;
 	return 0;
 }
+
