@@ -65,7 +65,7 @@ ll giaithua(ll n){
 	return res;
 }
 
-//thinh- ham mu
+/*//thinh- ham mu
 double pow(int a, int b)
 {
 	double res =1;
