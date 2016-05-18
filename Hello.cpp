@@ -12,10 +12,22 @@ using namespace std;
 typedef long long ll;
 typedef long double ld;
 
+/**
+ * HoaNP
+ * add function
+ * @param: long long a, long long b
+ * @return: a + b
+ */
 ll add(ll a, ll b){
 	return(a+b);
 }
 
+/**
+ * HoaNP
+ * multify function
+ * @param: long long a, long long b
+ * @return: a * b
+ */
 ll multiply(ll a, ll b){
 	return(a*b);
 }
@@ -30,13 +42,19 @@ ll chia(ll a, ll b)
 	{
 		return (a/b);
 	}
-// Nhat - ham giai thua
-ll giaithua(int n)
-	{
-		ll result=1;
-    		for (int i=2;i<=n;i++) result*=i;
-    		return result;
-	}
+	
+/**
+ * HoaNP
+ * Ham giai thua
+ * @param: long long n
+ * @return: n!
+ */
+ll giaithua(ll n){
+	ll res = 1;
+	for(int i = 2; i <= n; i++) res*=i;
+	return res;
+}
+
 //thinh- ham mu
 double pow(int a, int b)
 {
@@ -64,11 +82,12 @@ double sqrt(int a)
 int main() {
 	ll a = 21;
 	ll b = 170;
+	ll c = 17;
 	cout << a << " + " << b << " = " << add(a,b) << endl;
 	cout << a << " * " << b << " = " << multiply(a,b) << endl;
 	cout << a << " - " << b << " = " << tru(a,b) << endl;
-	cout << a << " / " << b << " = " << chia(a,b) << endl;
-	cout << "Giai thua cua" << a << "la :" << giaithua(a) << endl;
+	cout << a << " / " << b << " = " << chia(b,a) << endl;
+	cout << "Giai thua cua " << c << " la :" << giaithua(c) << endl;
 	return 0;
 }
 
