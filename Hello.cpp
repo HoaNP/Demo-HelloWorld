@@ -7,6 +7,7 @@
 //============================================================================
 
 #include <iostream>
+#include<cmath>
 using namespace std;
 
 typedef long long ll;
@@ -74,14 +75,7 @@ double pow(int a, int b)
 //thinh- ham tinh can bac 2 dung PP Newton
 double sqrt(int a)
 {
-	double xn, res;
-	xn = a/2;
-	do 
-	{
-		res = xn;
-		xn = 0.5 * (xn + a/xn);
-	} while ((xn-res) > 0.0001||(xn-res) < -0.0001);
-	return res;
+	return sqrt(a);
 }
 
 /**
