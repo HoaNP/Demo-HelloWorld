@@ -22,7 +22,8 @@ typedef long double ld;
  */
 ll add(ll a, ll b){
 	// Hai Con thi biet cai gi -_-
-	// Hello world 
+	// Hello world
+	// OK You win :)
 	return(a+b);
 }
 
