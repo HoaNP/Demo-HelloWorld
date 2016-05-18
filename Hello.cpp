@@ -7,6 +7,8 @@
 //============================================================================
 
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
 typedef long long ll;
@@ -18,9 +20,9 @@ typedef long double ld;
  * @param: long long a, long long b
  * @return: a + b
  */
-ll add(ll a, ll b){
-	return(a+b);
-}
+//ll add(ll a, ll b){
+//	return(a+b);
+//}
 
 /**
  * HoaNP
@@ -28,9 +30,9 @@ ll add(ll a, ll b){
  * @param: long long a, long long b
  * @return: a * b
  */
-ll multiply(ll a, ll b){
-	return(a*b);
-}
+//ll multiply(ll a, ll b){
+//	return(a*b);
+//}
 
 // Nhat - ham tru
 ll tru(ll a, ll b)
@@ -51,7 +53,15 @@ ll chia(ll a, ll b)
  */
 ll giaithua(ll n){
 	ll res = 1;
-	for(int i = 2; i <= n; i++) res*=i;
+	if(n==0 || n==1)
+		return 1;
+	else if(n <0)
+		return -1;
+	else
+	{
+		for(int i = 2; i<=n; i++)
+			res = res*i;
+	} 
 	return res;
 }
 
@@ -66,15 +76,9 @@ double pow(int a, int b)
 //thinh- ham tinh can bac 2 dung PP Newton
 double sqrt(int a)
 {
-	double xn, res;
-	xn = a/2;
-	do 
-	{
-		res = xn;
-		xn = 0.5 * (xn + a/xn);
-	} while ((xn-res) > 0.0001||(xn-res) < -0.0001);
-	return res;
+	return sqrt(a);
 }
+
 /**
  * This is main function
  */
@@ -82,7 +86,7 @@ double sqrt(int a)
 int main() {
 	ll a = 21;
 	ll b = 170;
-	ll c = 17;
+	ll c = 5;
 	cout << a << " + " << b << " = " << add(a,b) << endl;
 	cout << a << " * " << b << " = " << multiply(a,b) << endl;
 	cout << a << " - " << b << " = " << tru(a,b) << endl;
